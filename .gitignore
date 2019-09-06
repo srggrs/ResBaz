@@ -1,0 +1,9 @@
+# folders
+*/data/*
+*/__pycache__
+*/.ipynb_checkpoints
+
+# files
+*/*.png
+*/*.pyc
+*.sublime*
