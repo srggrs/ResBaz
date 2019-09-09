@@ -1,6 +1,6 @@
-## Instructions
+# Instructions
 
-### Setting up the Virtual Environment
+## Setting up the Virtual Environment
 
 For Unix-like using virtualenv
 ```bash
@@ -12,7 +12,7 @@ Using Anaconda/conda (i.e. Windows OS)
 conda create --name data-meetup-env --path python=3.6 
 ```
 
-### Install the Python Dependencies
+## Install the Python Dependencies
 
 For Unix-like using virtualenv
 ```bash
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```
 
 
-### Jupyter Notebook
+## Jupyter Notebook
 
 Setting up the theme (not necessary!) like the talk
 ```bash
@@ -45,7 +45,12 @@ Run the interactive Presentation
 jupyter nbconvert Pandas-vs-Dask-rezbaz2019.ipynb --to slides --post serve --SlidesExporter.reveal_scroll=True
 ```
 
-### Datasets Links
+## Links
+
+### Similar presentations
+[Hunter Analytics Meetup Feb 2019](https://github.com/newwwie/data-analytics-meetup/tree/master/talks/Feb2019-Intro-Pandas-Dask)
+
+### Datasets
 
 Example: Example-CSV-time-series
 [Electrical consumption data](https://archive.ics.uci.edu/ml/machine-learning-databases/00235/household_power_consumption.zip)
@@ -57,7 +62,7 @@ Example: Example-Dask-bag
 [Ask Ubuntu on Stack Exchange posts](https://archive.org/download/stackexchange/askubuntu.com.7z)
 
 
-### Various Links
+### Various
 
 Bulding and interactive data presentation (aka Creating slides) with Jupyter Notebook
 [Jupyter Presentation](https://medium.com/learning-machine-learning/present-your-data-science-projects-with-jupyter-slides-75f20735eb0f)
