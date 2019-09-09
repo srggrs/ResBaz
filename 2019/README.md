@@ -59,7 +59,7 @@ Example: Example-Dask-bag
 
 ### Various Links
 
-Bulding and interactive data presentation with Jupyter Notebook
+Bulding and interactive data presentation (aka Creating slides) with Jupyter Notebook
 [Jupyter Presentation](https://medium.com/learning-machine-learning/present-your-data-science-projects-with-jupyter-slides-75f20735eb0f)
 
 Reading how I build the Dask Bag example
