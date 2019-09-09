@@ -42,7 +42,7 @@ jt -t oceans16 -fs 12 -cellw 100% -nfs 13 -tfs 14 -fs 12 -m auto -T -N -altmd #f
 
 Run the interactive Presentation
 ```bash
-jupyter nbconvert Pandas-vs-Dask-rezbaz2019.ipynb --to slides --post serve --SlidesExporter.reveal_scroll=True
+jupyter nbconvert Pandas-vs-Dask-rezbaz2019-slides.ipynb --to slides --post serve --SlidesExporter.reveal_scroll=True
 ```
 
 ## Links
