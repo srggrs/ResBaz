@@ -11,6 +11,7 @@ DATADIR = os.path.abspath(os.path.join(WORKDIR, 'data'))
 if not os.path.exists(DATADIR):
 	os.makedirs(DATADIR)
 
+
 def electr_consump():
 	'''
 	Data Set Information:
@@ -35,17 +36,19 @@ def electr_consump():
 	'''
 	print(electr_consump.__doc__, flush=True)
 	url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00235/household_power_consumption.zip'
-	fname = os.path.join(DATADIR, 'household_power_consumption.txt')
+	fname = os.path.join(DATADIR, 'household_power_consumption.zip')
 	# check if file is downloaded first
 	if os.path.exists(fname):
 		print('Electrical consumption data set already present', flush=True)
 		return None
 
 	# download the file
+	print('Downloading data . . .')
 	req.urlretrieve(url, fname)
 	print('Downloaded Electrical consumption data set', flush=True)
 
 	return None
+
 
 def au_elec_dev():
 	urls ={ 
@@ -70,6 +73,7 @@ def au_elec_dev():
 
 	return names
 
+
 def flights():
     flights_raw = os.path.join(DATADIR, 'nycflights.tar.gz')
     flightdir = os.path.join(DATADIR, 'nycflights')
@@ -90,9 +94,41 @@ def flights():
     print("** Finished! **")
     return glob(os.path.join(flightdir, '*.csv'))
 
+
 def nasa_file():
     url = ''
     return None
+
+
+def waves_data():
+	"""
+	waves data from https://www.data.qld.gov.au/dataset/coastal-data-system-waves-mooloolaba
+	Descripton: Measured/Calculated wave parameters. Measured and derived wave data from
+	data collected by oceanographic wave measuring buoys anchored at Mooloolaba.
+	This site is jointly operated by the Department of Environment and Science and the
+	Department of Transport and Main Roads. For more information please refer to www.qld.gov.au/waves.
+
+	Fields:
+	Date/Time: Date
+	Hs: Significant wave height, an average of the highest third of the waves in a record (26.6 minute recording period)
+	Hmax: The maximum wave height in the record
+	Tz: The zero upcrossing wave period
+	Tp: The peak energy wave period
+	Dir_Tp TRUE: Direction (related to true north) from which the peak period waves are coming from
+	SST: Approximation of sea surface temperature
+	"""
+	url = 'http://www.ehp.qld.gov.au/data-sets/waves/mooloolaba/mooloolaba_200004200000-201412312350.csv'
+	fname = os.path.join(DATADIR, 'waves.csv')
+	# check if file is downloaded first
+	if os.path.exists(fname):
+		print('Waves data set already present', flush=True)
+		return fname
+
+	print('Downloading data . . .')
+	req.urlretrieve(url, fname)
+	print('Downloaded Waves data set', flush=True)
+	return fname
+
 
 if __name__ == '__main__':
 	electr_consump()
