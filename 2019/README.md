@@ -37,7 +37,7 @@ pip install -r requirements.txt
 Setting up the theme (not necessary!) like the talk
 ```bash
 source venv/bin/active
-jt -t oceans16 -fs 12 -cellw 100% -nfs 13 -tfs 14 -fs 12 -m auto -T -N -altmd #fff
+jt -t chesterish -fs 12 -cellw 90% -nfs 12 -tfs 12 -fs 12 -m auto -T -N
 ```
 
 Run the interactive Presentation
